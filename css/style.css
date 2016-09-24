@@ -14,7 +14,16 @@ footer {
 /* HEADER */
 
 header {
-    height: 400px;
+    height: 300px;
+}
+
+.contacts::before {
+    float: left;
+    width: 15px;
+    height: 18px;
+    content: '';
+    background-color: #dfdfdf;
+    background-image: url('../img/icons.png');
 }
 
 .hero {
@@ -23,24 +32,40 @@ header {
 }
 
 .contacts,
-.login,
+.user,
 .quick-access-icons,
 .quick-access-icons > *,
 .query {
     display: inline-block;
 }
 
-.quick-access-icons {
-    width: 180px;
-    height: 40px;
+.user {
+    background: url('../img/icons.png') -97px 0 no-repeat;
+    background-color: darkblue;
+}
+
+.user > a {
+    color: #fff;
+}
+
+.login {
+    margin-left: 16px;
 }
 
 .home,
 .sitemap,
 .email {
-    width: 15px;
-    height: 11px;
-    background: url('../img/icons.png');
+    width: 14px;
+    height: 14px;
+    background: url('../img/icons.png') -13px 0;
+}
+
+.sitemap {
+    background-position: -28px 0;
+}
+
+.email {
+    background-position: -43px 0;
 }
 
 .bucket {
@@ -48,9 +73,12 @@ header {
 }
 
 .bucket::before {
-    width: 20px;
+    float: left;
+    width: 23px;
+    height: 20px;
     content: '';
-    background: url('../img/icons.png');
+    background: url('../img/icons.png') -58px 0 no-repeat;
+    background-color: #dfdfdf;
 }
 
 /* MAIN */
@@ -72,6 +100,14 @@ header {
 
 .catalog-item > * {
     flex: 1 0 auto;
+}
+
+.aside-heading:before {
+    float: left;
+    width: 15px;
+    height: 18px;
+    content: '';
+    background: blue url('../img/icons.png') -83px 0;
 }
 
 .showroom {
