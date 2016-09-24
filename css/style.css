@@ -1,0 +1,96 @@
+/* GENERAL */
+header,
+main,
+footer {
+    width: 910px;
+    margin: 0 auto;
+}
+
+.offset {
+    position: absolute;
+    top: -1000px;
+}
+
+/* HEADER */
+
+header {
+    height: 400px;
+}
+
+.hero {
+    height: 237px;
+    background: url("../img/background.png") center center no-repeat;
+}
+
+.contacts,
+.login,
+.quick-access-icons,
+.quick-access-icons > *,
+.query {
+    display: inline-block;
+}
+
+.quick-access-icons {
+    width: 180px;
+    height: 40px;
+}
+
+.home,
+.sitemap,
+.email {
+    width: 15px;
+    height: 11px;
+    background: url('../img/icons.png');
+}
+
+.bucket {
+    float: right;
+}
+
+.bucket::before {
+    width: 20px;
+    content: '';
+    background: url('../img/icons.png');
+}
+
+/* MAIN */
+.query {
+    border: 1px solid #cdcdcd;
+}
+
+.search,
+.catalog-item,
+.showroom,
+.partners {
+    display: flex;
+}
+
+.showroom {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.catalog-item > * {
+    flex: 1 0 auto;
+}
+
+.showroom {
+    flex-grow: 2;
+    flex-basis: 60%;
+}
+
+.catalog-item > nav > a,
+.filter > form > * {
+    display: block;
+}
+
+figure {
+    margin: 15px;
+}
+
+.partners {
+    justify-content: center;
+    align-items: center;
+}
+
+/* FOOTER */

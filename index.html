@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Zazor Web Site</title>
+        <!-- <link rel="stylesheet" href="css/reset.css"> -->
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
@@ -20,9 +22,9 @@
             </form>
 
             <div class="quick-access-icons">
-                <a class="home" title="Go to home page"><img alt="Home page icon" src="img/icons.png"></a>
-                <a class="share" title="Share this"><img alt="Share icon" src="img/icons.png"></a>
-                <a class="email" title="Email us"><img alt="Email icon" src="img/icons.png"></a>
+                <a class="home" title="Go to home page"></a>
+                <a class="sitemap" title="Share this"></a>
+                <a class="email" title="Email us"></a>
             </div>
 
             <div class="hero"><h1 class="offset">Zazor.com.ua. Drives you away</h1></div>
@@ -42,295 +44,302 @@
         </header>
 
         <main>
-            <!-- Поиск по автомобилю -->
-            <form class="query" name="auto-query" action="index.html" method="post">
-                <h4>Поиск по автомобилю</h4>
-                <!-- Диски -->
-                <fieldset>
-                    <legend>Диски:</legend>
-                    <label for="auto-brand">
-                        Марка <span class="minor-text">авто</span>
-                    </label>
-                    <select id="auto-brand" name="brand">
+            <section class="search">
+                <!-- Поиск по автомобилю -->
+                <form class="query" name="auto-query" action="index.html" method="post">
+                    <h4>Поиск по автомобилю</h4>
+                    <!-- Диски -->
+                    <fieldset>
+                        <legend>Диски:</legend>
+                        <label for="auto-brand">
+                            Марка <span class="minor-text">авто</span>
+                        </label>
+                        <select id="auto-brand" name="brand">
+                            <option value="blank"></option>
+                            <option value="brand1">Марка авто 1</option>
+                        </select>
+
+                        <label for="auto-model">
+                            Модель <span class="minor-text">автомобиля</span>
+                        </label>
+                        <select id="auto-model" name="model">
+                            <option value="blank"></option>
+                            <option value="model1">Модель авто 1</option>
+                        </select>
+
+                        <label for="auto-year">
+                            Год выпуска <span class="minor-text">автомобиля</span>
+                        </label>
+                        <select id="auto-year" name="year">
+                            <option value="blank"></option>
+                            <option value="2015">2015</option>
+                        </select>
+
+                        <label for="auto-complectation">
+                            Комплектация
+                        </label>
+                        <select id="auto-complectation" name="complectation">
+                            <option value="blank"></option>
+                            <option value="complete">Полная</option>
+                        </select>
+                    </fieldset>
+
+                    <!-- Шины -->
+                    <fieldset>
+                        <legend>Шины:</legend>
+                        <label for="tire-brand">
+                            Марка <span class="minor-text">авто</span>
+                        </label>
+                        <select id="tire-brand" name="brand">
+                            <option value="blank"></option>
+                            <option value="brand1">Марка авто 1</option>
+                        </select>
+
+                        <label for="tire-model">
+                            Модель <span class="minor-text">автомобиля</span>
+                        </label>
+                        <select id="tire-model" name="model">
+                            <option value="blank"></option>
+                            <option value="model1">Модель авто 1</option>
+                        </select>
+
+                        <label for="tire-year">
+                            Год выпуска <span class="minor-text">автомобиля</span>
+                        </label>
+                        <select id="tire-year" name="year">
+                            <option value="blank"></option>
+                            <option value="2015">2015</option>
+                        </select>
+
+                        <label for="tire-complectation">
+                            Комплектация
+                        </label>
+                        <select id="tire-complectation" name="complectation">
+                            <option value="blank"></option>
+                            <option value="complete">Полная</option>
+                        </select>
+                    </fieldset>
+
+                    <input type="submit" value="поиск&hellip;">
+                </form>
+
+                <!-- Поиск шин -->
+                <form class="query" name="tires" action="index.html" method="post">
+                    <h4>поиск шин</h4>
+                    <label for="size">Размер</label>
+                    <select name="size" id="size">
+                        <option value="145">145</option>
+                    </select>
+                    /
+                    <select name="fraction">
                         <option value="blank"></option>
-                        <option value="brand1">Марка авто 1</option>
+                        <option value="100">100</option>
                     </select>
-
-                    <label for="auto-model">
-                        Модель <span class="minor-text">автомобиля</span>
-                    </label>
-                    <select id="auto-model" name="model">
+                    R
+                    <select name="r-size">
                         <option value="blank"></option>
-                        <option value="model1">Модель авто 1</option>
+                        <option value="r-size1"></option>
                     </select>
 
-                    <label for="auto-year">
-                        Год выпуска <span class="minor-text">автомобиля</span>
+                    <label>Сезон
+                        <input type="checkbox" name="season" value="summer">лето
                     </label>
-                    <select id="auto-year" name="year">
-                        <option value="blank"></option>
-                        <option value="2015">2015</option>
-                    </select>
-
-                    <label for="auto-complectation">
-                        Комплектация
+                    <label>
+                        <input type="checkbox" name="season" value="winter">зима
                     </label>
-                    <select id="auto-complectation" name="complectation">
-                        <option value="blank"></option>
-                        <option value="complete">Полная</option>
-                    </select>
-                </fieldset>
-
-                <!-- Шины -->
-                <fieldset>
-                    <legend>Шины:</legend>
-                    <label for="tire-brand">
-                        Марка <span class="minor-text">авто</span>
+                    <label>
+                        <input type="checkbox" name="season" value="all seasons">всесезон
                     </label>
-                    <select id="tire-brand" name="brand">
-                        <option value="blank"></option>
-                        <option value="brand1">Марка авто 1</option>
-                    </select>
 
-                    <label for="tire-model">
-                        Модель <span class="minor-text">автомобиля</span>
-                    </label>
-                    <select id="tire-model" name="model">
-                        <option value="blank"></option>
-                        <option value="model1">Модель авто 1</option>
-                    </select>
+                    <input type="submit" value="поиск&hellip;">
 
-                    <label for="tire-year">
-                        Год выпуска <span class="minor-text">автомобиля</span>
-                    </label>
-                    <select id="tire-year" name="year">
-                        <option value="blank"></option>
-                        <option value="2015">2015</option>
-                    </select>
+                </form>
 
-                    <label for="tire-complectation">
-                        Комплектация
-                    </label>
-                    <select id="tire-complectation" name="complectation">
-                        <option value="blank"></option>
-                        <option value="complete">Полная</option>
-                    </select>
-                </fieldset>
+                <!-- Поиск дисков -->
+                <form class="query" name="disks" action="index.html" method="post">
+                    <h4>поиск дисков</h4>
+                    <fieldset>
+                        <label for="disk-diameter">Диаметр <span class="minor-text">диска:</span></label>
+                        <select name="disk-diameter" id="disk-diameter">
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
 
-                <input type="submit" value="поиск&hellip;">
-            </form>
+                        <label for="num-of-holes">Количество
+                            <span class="minor-text">крепёжных отверстий:</span>
+                        </label>
+                        <select name="num-of-holes" id="num-of-holes">
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                        </select>
 
-            <!-- Поиск шин -->
-            <form class="query" name="tires" action="index.html" method="post">
-                <h4>поиск шин</h4>
-                <label for="size">Размер</label>
-                <select name="size" id="size">
-                    <option value="145">145</option>
-                </select>
-                /
-                <select name="fraction">
-                    <option value="blank"></option>
-                    <option value="100">100</option>
-                </select>
-                R
-                <select name="r-size">
-                    <option value="blank"></option>
-                    <option value="r-size1"></option>
-                </select>
+                        <label for="diameter-of-holes">Диаметр
+                            <span class="minor-text">расположения крепёжных отверстий:</span>
+                        </label>
+                        <select name="diameter-of-holes" id="diameter-of-holes">
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                        </select>
+                    </fieldset>
 
-                <label>Сезон
-                    <input type="checkbox" name="season" value="summer">лето
-                </label>
-                <label>
-                    <input type="checkbox" name="season" value="winter">зима
-                </label>
-                <label>
-                    <input type="checkbox" name="season" value="all seasons">всесезон
-                </label>
+                    <fieldset class="has-divider">
+                        <label for="center-hole-diameter">ДЦО
+                            <span class="minor-text">(диаметр центрального отверстия):</span>
+                        </label>
+                        <select name="center-hole-diameter" id="center-hole-diameter">
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                        </select>
 
-                <input type="submit" value="поиск&hellip;">
+                        <label for="disk-radius">ЕТ
+                            <span class="minor-text">(радиус диска):</span>
+                        </label>
+                        <select name="disk-radius" id="disk-radius">
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                        </select>
 
-            </form>
+                    </fieldset>
 
-            <!-- Поиск дисков -->
-            <form class="query" name="disks" action="index.html" method="post">
-                <h4>поиск дисков</h4>
-                <fieldset>
-                    <label for="disk-diameter">Диаметр <span class="minor-text">диска:</span></label>
-                    <select name="disk-diameter" id="disk-diameter">
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                    </select>
+                    <input type="submit" value="поиск&hellip;">
 
-                    <label for="num-of-holes">Количество
-                        <span class="minor-text">крепёжных отверстий:</span>
-                    </label>
-                    <select name="num-of-holes" id="num-of-holes">
-                        <option value="3">3</option>
-                        <option value="2">2</option>
-                    </select>
-
-                    <label for="diameter-of-holes">Диаметр
-                        <span class="minor-text">расположения крепёжных отверстий:</span>
-                    </label>
-                    <select name="diameter-of-holes" id="diameter-of-holes">
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                    </select>
-                </fieldset>
-
-                <fieldset class="has-divider">
-                    <label for="center-hole-diameter">ДЦО
-                        <span class="minor-text">(диаметр центрального отверстия):</span>
-                    </label>
-                    <select name="center-hole-diameter" id="center-hole-diameter">
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                    </select>
-
-                    <label for="disk-radius">ЕТ
-                        <span class="minor-text">(радиус диска):</span>
-                    </label>
-                    <select name="disk-radius" id="disk-radius">
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                    </select>
-
-                </fieldset>
-
-                <input type="submit" value="поиск&hellip;">
-
-            </form>
-
-            <nav class="catalog">
-                <h2>Каталог продукции</h2>
-                <h3>Шины</h3>
-                <a href="#">Наименование 1</a>
-                <a href="#">Наименование 2</a>
-                <a href="#">Наименование 3</a>
-                <a href="#">Наименование 4</a>
-
-                <h3>Диски</h3>
-                <a href="#">Наименование 1</a>
-                <a href="#">Наименование 2</a>
-                <a href="#">Наименование 3</a>
-                <a href="#">Наименование 4</a>
-
-                <h3>Болты</h3>
-                <a href="#">Наименование 1</a>
-                <a href="#">Наименование 2</a>
-                <a href="#">Наименование 3</a>
-                <a href="#">Наименование 4</a>
-
-            </nav>
-
-            <section class="showroom">
-                <h2 class="offset">Ассортимент</h2>
-                <!-- 1st row -->
-                <figure>
-                    <figcaption>Goodyear
-                        <div class="minor-title">Ultra Grip Extreme</div>
-                    </figcaption>
-                    <img src="img/tire1" alt="Goodyear / Ultra Grip Extreme Model" />
-                    <div class="price">90.00 грн.</div>
-                </figure>
-
-                <figure>
-                    <figcaption>Nokian
-                        <div class="minor-title">Hakkapeliitta R</div>
-                    </figcaption>
-                    <img src="img/tire2" alt="Nokian / Hakkapeliitta R Model" />
-                    <div class="price">115.00 грн.</div>
-                </figure>
-
-                <figure>
-                    <figcaption>Hankook
-                        <div class="minor-title">K 708 155/65 R14</div>
-                    </figcaption>
-                    <img src="img/tire3" alt="Hankook / K 708 155/65 R14 Model" />
-                    <div class="price">393.00 грн.</div>
-                </figure>
-
-                <!-- 2nd row -->
-                <figure>
-                    <figcaption>Goodyear
-                        <div class="minor-title">Ultra Grip Extreme</div>
-                    </figcaption>
-                    <img src="img/tire1" alt="Goodyear / Ultra Grip Extreme Model" />
-                    <div class="price">90.00 грн.</div>
-                </figure>
-
-                <figure>
-                    <figcaption>Nokian
-                        <div class="minor-title">Hakkapeliitta R</div>
-                    </figcaption>
-                    <img src="img/tire2" alt="Nokian / Hakkapeliitta R Model" />
-                    <div class="price">115.00 грн.</div>
-                </figure>
-
-                <figure>
-                    <figcaption>Hankook
-                        <div class="minor-title">K 708 155/65 R14</div>
-                    </figcaption>
-                    <img src="img/tire3" alt="Hankook / K 708 155/65 R14 Model" />
-                    <div class="price">393.00 грн.</div>
-                </figure>
-
-                <!-- 3rd row -->
-                <figure>
-                    <figcaption>Goodyear
-                        <div class="minor-title">Ultra Grip Extreme</div>
-                    </figcaption>
-                    <img src="img/tire1" alt="Goodyear / Ultra Grip Extreme Model" />
-                    <div class="price">90.00 грн.</div>
-                </figure>
-
-                <figure>
-                    <figcaption>Nokian
-                        <div class="minor-title">Hakkapeliitta R</div>
-                    </figcaption>
-                    <img src="img/tire2" alt="Nokian / Hakkapeliitta R Model" />
-                    <div class="price">115.00 грн.</div>
-                </figure>
-
-                <figure>
-                    <figcaption>Hankook
-                        <div class="minor-title">K 708 155/65 R14</div>
-                    </figcaption>
-                    <img src="img/tire3" alt="Hankook / K 708 155/65 R14 Model" />
-                    <div class="price">393.00 грн.</div>
-                </figure>
-
+                </form>
             </section>
+            <!-- /END search forms -->
 
-            <aside class="right">
-                <form class="brands-query" name="brands-query" action="index.html" method="post">
-                    <h2>Бренды</h2>
+            <section class="catalog-item">
+
+                <nav>
+                    <h2>Каталог продукции</h2>
                     <h3>Шины</h3>
-                    <label>
-                        <input type="checkbox" name="tires-brand" value="Бренд 1">Бренд 1
-                    </label>
-                    <label>
-                        <input type="checkbox" name="tires-brand" value="Бренд 2">Бренд 2
-                    </label>
-                    <label>
-                        <input type="checkbox" name="tires-brand" value="Бренд 3">Бренд 3
-                    </label>
+                    <a href="#">Наименование 1</a>
+                    <a href="#">Наименование 2</a>
+                    <a href="#">Наименование 3</a>
+                    <a href="#">Наименование 4</a>
 
                     <h3>Диски</h3>
-                    <label>
-                        <input type="checkbox" name="disks-brand" value="Бренд 1">Бренд 1
-                    </label>
-                    <label>
-                        <input type="checkbox" name="disks-brand" value="Бренд 2">Бренд 2
-                    </label>
-                    <label>
-                        <input type="checkbox" name="disks-brand" value="Бренд 3">Бренд 3
-                    </label>
+                    <a href="#">Наименование 1</a>
+                    <a href="#">Наименование 2</a>
+                    <a href="#">Наименование 3</a>
+                    <a href="#">Наименование 4</a>
 
-                    <input type="submit" value="Выбрать">
-                </form>
-            </aside>
+                    <h3>Болты</h3>
+                    <a href="#">Наименование 1</a>
+                    <a href="#">Наименование 2</a>
+                    <a href="#">Наименование 3</a>
+                    <a href="#">Наименование 4</a>
+
+                </nav>
+
+                <section class="showroom">
+                    <h2 class="offset">Ассортимент</h2>
+                    <!-- 1st row -->
+                    <figure>
+                        <figcaption>Goodyear
+                            <div class="minor-title">Ultra Grip Extreme</div>
+                        </figcaption>
+                        <img src="img/tire1.png" alt="Goodyear / Ultra Grip Extreme Model" />
+                        <div class="price">90.00 грн.</div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>Nokian
+                            <div class="minor-title">Hakkapeliitta R</div>
+                        </figcaption>
+                        <img src="img/tire2.png" alt="Nokian / Hakkapeliitta R Model" />
+                        <div class="price">115.00 грн.</div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>Hankook
+                            <div class="minor-title">K 708 155/65 R14</div>
+                        </figcaption>
+                        <img src="img/tire3.png" alt="Hankook / K 708 155/65 R14 Model" />
+                        <div class="price">393.00 грн.</div>
+                    </figure>
+
+                    <!-- 2nd row -->
+                    <figure>
+                        <figcaption>Goodyear
+                            <div class="minor-title">Ultra Grip Extreme</div>
+                        </figcaption>
+                        <img src="img/tire1.png" alt="Goodyear / Ultra Grip Extreme Model" />
+                        <div class="price">90.00 грн.</div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>Nokian
+                            <div class="minor-title">Hakkapeliitta R</div>
+                        </figcaption>
+                        <img src="img/tire2.png" alt="Nokian / Hakkapeliitta R Model" />
+                        <div class="price">115.00 грн.</div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>Hankook
+                            <div class="minor-title">K 708 155/65 R14</div>
+                        </figcaption>
+                        <img src="img/tire3.png" alt="Hankook / K 708 155/65 R14 Model" />
+                        <div class="price">393.00 грн.</div>
+                    </figure>
+
+                    <!-- 3rd row -->
+                    <figure>
+                        <figcaption>Goodyear
+                            <div class="minor-title">Ultra Grip Extreme</div>
+                        </figcaption>
+                        <img src="img/tire1.png" alt="Goodyear / Ultra Grip Extreme Model" />
+                        <div class="price">90.00 грн.</div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>Nokian
+                            <div class="minor-title">Hakkapeliitta R</div>
+                        </figcaption>
+                        <img src="img/tire2.png" alt="Nokian / Hakkapeliitta R Model" />
+                        <div class="price">115.00 грн.</div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>Hankook
+                            <div class="minor-title">K 708 155/65 R14</div>
+                        </figcaption>
+                        <img src="img/tire3.png" alt="Hankook / K 708 155/65 R14 Model" />
+                        <div class="price">393.00 грн.</div>
+                    </figure>
+
+                </section>
+
+                <aside class="filter">
+                    <form class="brands-query" name="brands-query" action="index.html" method="post">
+                        <h2>Бренды</h2>
+                        <h3>Шины</h3>
+                        <label>
+                            <input type="checkbox" name="tires-brand" value="Бренд 1">Бренд 1
+                        </label>
+                        <label>
+                            <input type="checkbox" name="tires-brand" value="Бренд 2">Бренд 2
+                        </label>
+                        <label>
+                            <input type="checkbox" name="tires-brand" value="Бренд 3">Бренд 3
+                        </label>
+
+                        <h3>Диски</h3>
+                        <label>
+                            <input type="checkbox" name="disks-brand" value="Бренд 1">Бренд 1
+                        </label>
+                        <label>
+                            <input type="checkbox" name="disks-brand" value="Бренд 2">Бренд 2
+                        </label>
+                        <label>
+                            <input type="checkbox" name="disks-brand" value="Бренд 3">Бренд 3
+                        </label>
+
+                        <input type="submit" value="Выбрать">
+                    </form>
+                </aside>
+
+            </section>
 
             <!-- Partner logos -->
             <section class="partners">
@@ -341,7 +350,7 @@
                 <a href="#"><img src="img/avon.png" alt="Avon Tires logo"></a>
                 <a href="#"><img src="img/tirefactory.png" alt="Tire Factory logo"></a>
                 <a href="#"><img src="img/pirelli.png" alt="Pirelli logo"></a>
-                <a href="#"><img src="img/dunlop.png" alt="Dunloplogo"></a>
+                <a href="#"><img src="img/dunlop.png" alt="Dunlop logo"></a>
             </section>
         </main>
 
