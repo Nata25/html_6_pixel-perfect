@@ -47,7 +47,7 @@
         <main>
             <section class="search">
                 <!-- Поиск по автомобилю -->
-                <form class="query" name="auto-query" action="index.html" method="post">
+                <form class="query auto" name="auto" action="index.html" method="post">
                     <h4>Поиск по автомобилю</h4>
                     <!-- Диски -->
                     <fieldset>
@@ -56,7 +56,7 @@
                             Марка <span class="minor-text">авто</span>
                         </label>
                         <select id="auto-brand" name="brand">
-                            <option value="blank"></option>
+                            <option value="blank">&nbsp;</option>
                             <option value="brand1">Марка авто 1</option>
                         </select>
 
@@ -64,7 +64,7 @@
                             Модель <span class="minor-text">автомобиля</span>
                         </label>
                         <select id="auto-model" name="model">
-                            <option value="blank"></option>
+                            <option value="blank">&nbsp;</option>
                             <option value="model1">Модель авто 1</option>
                         </select>
 
@@ -72,7 +72,7 @@
                             Год выпуска <span class="minor-text">автомобиля</span>
                         </label>
                         <select id="auto-year" name="year">
-                            <option value="blank"></option>
+                            <option value="blank">&nbsp;</option>
                             <option value="2015">2015</option>
                         </select>
 
@@ -80,7 +80,7 @@
                             Комплектация
                         </label>
                         <select id="auto-complectation" name="complectation">
-                            <option value="blank"></option>
+                            <option value="blank">&nbsp;</option>
                             <option value="complete">Полная</option>
                         </select>
                     </fieldset>
@@ -89,34 +89,34 @@
                     <fieldset>
                         <legend>Шины:</legend>
                         <label for="tire-brand">
-                            Марка <span class="minor-text">авто</span>
+                            Марка <span class="minor-text">авто:</span>
                         </label>
                         <select id="tire-brand" name="brand">
-                            <option value="blank"></option>
+                            <option value="blank">&nbsp;</option>
                             <option value="brand1">Марка авто 1</option>
                         </select>
 
                         <label for="tire-model">
-                            Модель <span class="minor-text">автомобиля</span>
+                            Модель <span class="minor-text">автомобиля:</span>
                         </label>
                         <select id="tire-model" name="model">
-                            <option value="blank"></option>
+                            <option value="blank">&nbsp;</option>
                             <option value="model1">Модель авто 1</option>
                         </select>
 
                         <label for="tire-year">
-                            Год выпуска <span class="minor-text">автомобиля</span>
+                            Год выпуска <span class="minor-text">автомобиля:</span>
                         </label>
                         <select id="tire-year" name="year">
-                            <option value="blank"></option>
+                            <option value="blank">&nbsp;</option>
                             <option value="2015">2015</option>
                         </select>
 
                         <label for="tire-complectation">
-                            Комплектация
+                            Комплектация:
                         </label>
                         <select id="tire-complectation" name="complectation">
-                            <option value="blank"></option>
+                            <option value="blank">&nbsp;</option>
                             <option value="complete">Полная</option>
                         </select>
                     </fieldset>
@@ -125,39 +125,46 @@
                 </form>
 
                 <!-- Поиск шин -->
-                <form class="query" name="tires" action="index.html" method="post">
+                <form class="query tires" name="tires" action="index.html" method="post">
                     <h4>поиск шин</h4>
-                    <label for="size">Размер</label>
+                    <label for="size">  Размер:</label>
                     <select name="size" id="size">
                         <option value="145">145</option>
                     </select>
                     /
                     <select name="fraction">
-                        <option value="blank"></option>
+                        <option value="blank">&nbsp;</option>
                         <option value="100">100</option>
                     </select>
-                    R
-                    <select name="r-size">
-                        <option value="blank"></option>
-                        <option value="r-size1"></option>
+
+                    <label for="r-size" class="r-size">R</label>
+                    <select name="r-size" id="r-size">
+                        <option value="blank">&nbsp;</option>
+                        <option value="r-size1">&nbsp;</option>
                     </select>
 
-                    <label>Сезон
-                        <input type="checkbox" name="season" value="summer">лето
-                    </label>
-                    <label>
-                        <input type="checkbox" name="season" value="winter">зима
-                    </label>
-                    <label>
-                        <input type="checkbox" name="season" value="all seasons">всесезон
-                    </label>
+                    <fieldset class="season">
+                        <label for="summer">Сезон:</label>
+                        <label>
+                            <input type="checkbox" name="season" id="summer" value="summer">
+                        лето</label>
+
+                        <label>
+                            <input type="checkbox" name="season" id="winter" value="winter">
+                        зима</label>
+
+                        <label>
+                            <input type="checkbox" name="season" id="all" value="all seasons">
+                        всесезон</label>
+
+                    </fieldset>
 
                     <input type="submit" value="поиск&hellip;">
 
                 </form>
 
                 <!-- Поиск дисков -->
-                <form class="query" name="disks" action="index.html" method="post">
+                <form class="query disks" name="disks" action="index.html" method="post">
                     <h4>поиск дисков</h4>
                     <fieldset>
                         <label for="disk-diameter">Диаметр <span class="minor-text">диска:</span></label>
@@ -193,7 +200,7 @@
                         </select>
 
                         <label for="disk-radius">ЕТ
-                            <span class="minor-text">(радиус диска):</span>
+                            <span class="minor-text">(вылет диска):</span>
                         </label>
                         <select name="disk-radius" id="disk-radius">
                             <option value="12">12</option>

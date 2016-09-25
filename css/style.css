@@ -182,8 +182,28 @@ main {
 }
 
 /* MAIN */
+
 .query {
-    border: 1px solid #cdcdcd;
+    position: relative;
+    height: 145px;
+    margin: 0 8px;
+    border: 1px solid #959393;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px 0px #888e95;
+    font-size: .5em;
+    font-weight: bold;
+}
+
+.query input[type=submit] {
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+    border: 0;
+    background: transparent;
+    font-size: 1.7em;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .search,
@@ -191,6 +211,125 @@ main {
 .showroom,
 .partners {
     display: flex;
+}
+
+h4,
+.auto legend,
+.query input[type=submit] {
+    color: #105b87;
+}
+
+.auto label {
+    width: 65px;
+}
+
+.tires label {
+    width: 35px;
+}
+
+.disks label {
+    width: 65px;
+}
+
+.search .query:first-child h4 {
+    text-align: center;
+}
+
+h4 {
+    margin: 3px 10px 5px;
+    font-size: 13px;
+}
+
+fieldset {
+    display: inline-block;
+    border: 0;
+}
+
+fieldset > *,
+.tires label {
+    display: inline-block;
+}
+
+.auto {
+    flex: 3 0 360px;
+}
+
+.auto fieldset > legend {
+    position: absolute;
+    top: 5px;
+    margin: 5px;
+}
+
+.auto fieldset {
+    width: 44%;
+}
+
+.auto fieldset:nth-child(3) > legend {  /* Поиск по автомобилю -> шины */
+    right: 10px;
+}
+
+.auto select {
+    width: 107px;
+    margin-left: 3px;
+}
+
+.auto fieldset > select:nth-child(7) { /* Год выпуска автомобиля */
+    width: 55px;
+}
+
+.auto fieldset > select:last-child {
+    margin-top: 5px;
+}
+
+.minor-text {
+    color: #767575;
+    font-weight: normal;
+}
+
+.tires {
+    flex: 1 0 140px;
+    padding: 0 7px;
+}
+
+.r-size {
+    text-align: right;
+}
+
+.season label {
+    display: inline-block;
+    width: 65px;
+}
+
+.season label:first-child {
+    position: relative;
+    top: 5px;
+    width: 30px;
+    height: 50px;
+    float: left;
+}
+
+.season {
+    margin-top: 5px;
+}
+
+.disks {
+    flex: 2 0 250px;
+}
+
+.disks fieldset {
+    display: inline-block;
+    vertical-align: top;
+    width: 41%;
+}
+
+.has-divider {
+    border-left: 1px solid #dbd7d7;
+    padding-left: 18px;
+}
+
+.has-divider label {
+    width: 80px;
+    margin-top: 5px;
 }
 
 .showroom {
