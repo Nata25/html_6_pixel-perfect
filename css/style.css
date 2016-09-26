@@ -4,7 +4,7 @@ main,
 footer {
     width: 910px;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .offset {
@@ -19,16 +19,22 @@ header {
 }
 
 .contacts {
-    margin-left: 5px;
+    position: relative;
+    top: 6px;
+    margin-left: 35px;
     color: #5e696d;
-    font-size: 1.1em;
+    font-family: Arial, sans-serif;
+    font-size: 105%;
+    letter-spacing: 1px;
 }
 
 .contacts::before {
+    position: absolute;
     margin-right: 5px;
-    float: left;
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
+    left: -26px;
+    top: -4px;
     border-radius: 50%;
     content: '';
     background-image: url('../img/icons.png'), linear-gradient(#0c3256, #206988);
@@ -50,57 +56,67 @@ footer a {
     display: inline-block;
 }
 
+/* registration form */
+
 .user {
     margin-left: 10px;
-    padding: 2px 7px 5px 3px;
+    padding: 2px 23px 5px 3px;
     background: url('../img/icons.png'), linear-gradient(#206988, #0c3256);
     background-position: -100px 0;
     border-top: 1px solid #a6c3cf;
     border-bottom: 1px solid #4e647a;
-    border-radius: 5px;
+    border-radius: 4px;
     box-shadow: 3px 3px 3px 0 #959595;
 }
 
-.user > input[type=text],
-.user > input[type=password] {
+.login,
+.pass {
     height: 11px;
+}
+
+.login {
+    width: 107px;
+    margin-left: 24px;
+}
+
+.pass {
+    width: 107px;
+    margin-left: 3px;
+}
+
+.user .submit {
+    padding: 0 0 0 2px;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 66%;
 }
 
 .user > a {
     display: inline-block;
     color: #fff;
-    font-size: .7em;
     text-decoration: none;
 }
 
-.user > a:nth-child(4) { /* регистрация */
+.user .register { /* регистрация */
     height: 10px;
     padding-left: 5px;
     border-left: 1px solid #667c97;
     line-height: 7px;
+    font-size: 66%;
 }
 
-.user > a:nth-child(5) { /* забыли пароль? */
-    margin-left: 10px;
+.user .restore-pass { /* забыли пароль? */
+    margin-left: 17px;
     padding-bottom: 1px;
     color: #B0B0B0;
     border-bottom: 1px solid #7b8c93;
-}
-
-.user > input[type=submit] {
-    padding-right: 0;
-    background-color: transparent;
-    border: 0;
-    color: #fff;
-}
-
-.login {
-    margin-left: 22px;
+    font-size: 65%;
 }
 
 .quick-access-icons {
-    margin: 20px 2px 0 10px;
-    padding: 0 7px 1px;
+    margin: 21px 2px 0 10px;
+    padding: 0 8px 2px;
     border-radius: 13px;
     border: 1px solid #b8b7b7;
     box-shadow: 1px 2px 5px -2px #d5d5d5;
@@ -111,7 +127,7 @@ footer a {
 .email {
     width: 14px;
     height: 14px;
-    margin: 0 2px;
+    margin: 0 1px;
     background: url('../img/icons.png') -17px 0;
 }
 
@@ -190,9 +206,11 @@ h3,
 
 .query {
     position: relative;
+    padding-left: 10px;
     height: 145px;
     margin: 0 8px;
     box-shadow: 3px 3px 5px 0px #888e95;
+    font-family: Arial, sans-serif;
     font-size: .5em;
     font-weight: bold;
 }
@@ -274,7 +292,7 @@ fieldset > *,
 }
 
 .auto select {
-    width: 107px;
+    width: 100px;
     margin-left: 3px;
 }
 
@@ -324,7 +342,7 @@ fieldset > *,
 .disks fieldset {
     display: inline-block;
     vertical-align: top;
-    width: 41%;
+    width: 45%;
 }
 
 .has-divider {
@@ -354,6 +372,11 @@ h3 {
     box-shadow: 1px 2px 5px 0px #888e95;
 }
 
+h3 {
+    width: 130px;
+    margin-top: 15px;
+}
+
 h3::before {
     float: left;
     width: 11px;
@@ -373,10 +396,6 @@ h3::before {
     content: '';
     background: #105b87 url('../img/icons.png') -83px 0;
     border-radius: 50%;
-}
-
-h3 {
-    width: 130px;
 }
 
 .filter h3,
