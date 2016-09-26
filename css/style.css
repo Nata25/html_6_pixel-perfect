@@ -45,7 +45,8 @@ header {
 .quick-access-icons,
 .quick-access-icons > *,
 .query,
-.main-nav > a {
+.main-nav > a,
+footer a {
     display: inline-block;
 }
 
@@ -465,8 +466,49 @@ figcaption {
 }
 
 .partners {
+    margin: 20px;
     justify-content: center;
     align-items: center;
 }
 
+.partners > a {
+    margin: 7px;
+}
+
 /* FOOTER */
+
+footer {
+    margin: 0 auto;
+    height: 70px;
+    background-color: #213a4d;
+    text-align: center;
+}
+
+.footer-nav {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.footer-nav > a {
+    margin: 10px 0;
+    padding: 0 10px;
+    border-right: 1px solid #e0e2e3;
+    color: #e0e2e3;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.footer-nav > a:last-child {
+    border: 0;
+}
+
+.footer-nav > a:hover,
+.footer-nav a.active {
+    color: #66acc8;
+}
+
+.copy {
+    margin-top: 5px;
+    font-size: .5em;
+    color: #9b4a4a;
+}
