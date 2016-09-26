@@ -185,7 +185,8 @@ main {
 
 .query,
 .aside-heading,
-h3 {
+h3,
+.showroom figure img {
     border: 1px solid #b2b0b0;
     border-radius: 15px;
 }
@@ -404,6 +405,8 @@ h3 {
     justify-content: center;
     flex-grow: 2;
     flex-basis: 60%;
+    background: linear-gradient(#e4e7e8, #93a7b0);
+    border-radius: 3px;
 }
 
 .catalog-item > nav > a,
@@ -441,6 +444,22 @@ h3 {
 
 figure {
     margin: 15px;
+    text-align: center;
+}
+
+figcaption {
+    color: #206988;
+}
+
+.minor-title {
+    color: #000;
+    font-size: 12px;
+}
+
+.price {
+    color: #00446c;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .partners {
