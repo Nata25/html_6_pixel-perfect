@@ -394,33 +394,42 @@ fieldset > *,
 
 /* Catalog */
 
+
+
 .catalog-item > * {
     flex: 1 0 auto;
 }
 
 .aside-heading,
 h3 {
-    padding: 5px;
     font-weight: inherit;
     text-transform: uppercase;
-    font-size: .9em;
+    font-size: 79%; /* h3 */
 }
 
 .aside-heading {
-    margin-top: 3px;
+    display: inline-block;
+    margin-top: 4px;
+    padding: 7px 9px 2px 3px;
     box-shadow: 1px 2px 5px 0px #888e95;
 }
 
 h3 {
-    width: 130px;
-    margin-top: 15px;
+    width: 150px;
+    height: 28px;
+    margin-top: 13px;
+    margin-left: 3px;
+    line-height: 30px;
+    padding-left: 9px;
+    box-sizing: border-box;
+    font-size: 85%;
 }
 
 h3::before {
     float: left;
     width: 11px;
     height: 11px;
-    margin: 2px 8px 0px 2px;
+    margin: 7px 8px 0px 1px;
     background: #fff;
     box-shadow: 0 0 0 5px #105b87;
     border-radius: 50%;
@@ -429,13 +438,19 @@ h3::before {
 
 .aside-heading:before {
     float: left;
-    width: 20px;
-    height: 20px;
+    margin-top: -5px;
+    width: 21px;
+    height: 21px;
     margin-right: 5px;
     content: '';
-    background: #105b87 url('../img/icons.png') -83px 0;
+    background: #105b87 url('../img/icons.png') -86px 2px;
     border-radius: 50%;
 }
+
+.brands-query h2 {
+    margin-top: 2px;
+}
+
 
 .filter h3,
 .filter input[type=submit] {
@@ -457,7 +472,7 @@ h3::before {
 }
 
 .showroom {
-    margin: 0 10px;
+    margin: 0 2px;
     flex-wrap: wrap;
     justify-content: center;
     flex-grow: 2;
@@ -474,16 +489,18 @@ h3::before {
 .catalog-item > nav > a,
 .filter label {
     color: #888e95;
-    font-size: 13px;
-    margin: 10px 0 0 20px;
+    font-size: 13px; /* nav > a */
+    margin: 10px 0 0 20px; /* nav > a */
 }
 
 .catalog-item {
-    margin-top: 17px;
+    margin-top: 13px;
 }
 
 .catalog-item > nav > a {
+    margin: 14px 3px 0 32px;
     text-decoration: none;
+    font-size: 80%;
 }
 
 .catalog-item > nav > a:hover {
@@ -495,12 +512,16 @@ h3::before {
 
 .catalog-item > nav > a::before {
     float: left;
-    margin: 3px;
+    margin: 2px 3px 2px 7px;
     width: 3px;
     height: 3px;
     border: 2px solid #888e95;
     border-radius: 50%;
     content: '';
+}
+
+.catalog-item > nav > a:nth-child(3) {
+    margin-top: 7px;
 }
 
 figure {
