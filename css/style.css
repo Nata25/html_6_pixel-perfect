@@ -494,6 +494,41 @@ figcaption {
     margin: 7px;
 }
 
+.partners > a:nth-child(2) {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.partners > a:nth-child(3) {
+    margin-top: 7px;
+    margin-left: 6px;
+}
+
+.partners > a:nth-child(4) {
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.partners > a:nth-child(5) {
+    margin-top: 0;
+    margin-left: 5px;
+}
+
+.partners > a:nth-child(6) {
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.partners > a:nth-child(7) {
+    margin-top: 3px;
+    margin-left: 6px;
+}
+
+.partners > a:last-child {
+    margin-top: 1px;
+    margin-left: 8px;
+}
+
 /* FOOTER */
 
 footer {
@@ -515,10 +550,6 @@ footer {
     color: #e0e2e3;
     text-decoration: none;
     font-size: .8rem;
-}
-
-.footer-nav > a:last-child {
-    border: 0;
 }
 
 .footer-nav > a:hover,
