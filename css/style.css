@@ -238,7 +238,7 @@ footer a {
 h3,
 .showroom figure img {
     border: 1px solid #b2b0b0;
-    border-radius: 15px;
+    border-radius: 15px; /* figure > img */
 }
 
 .query {
@@ -480,7 +480,7 @@ h3:nth-child(2)::before {
     flex-wrap: wrap;
     justify-content: center;
     flex-grow: 2;
-    flex-basis: 60%;
+    flex-basis: 70%;
     background: linear-gradient(#e4e7e8, #93a7b0);
     border-radius: 3px;
 }
@@ -532,24 +532,97 @@ h3:nth-child(2)::before {
     margin-top: 6px;
 }
 
+/* first image */
+
 figure {
     margin: 15px;
     text-align: center;
 }
 
 figcaption {
+    margin-left: -3px;
+    margin-top: -1px;
+    margin-bottom: 1px;
     color: #206988;
+    font-size: 95%;
+}
+
+.showroom figure img {
+    padding: 5px 34px 4px 29px;
+    background-color: #fff;
+    border-radius: 7px;
 }
 
 .minor-title {
+    margin-left: 6px;
+    font-size: 84%;
     color: #000;
-    font-size: 12px;
 }
 
 .price {
+    margin-left: 8px;
     color: #00446c;
+    font-family: Arial, sans-serif;
+    font-size: 103%;
     font-style: italic;
     font-weight: bold;
+}
+
+.small {
+    font-size: 80%;
+}
+
+/* second image */
+
+figure:nth-child(3) {
+    margin-left: 13px;
+}
+
+figure:nth-child(3) > img {
+    padding: 4px 34px 5px 32px;
+}
+
+figure:nth-child(3) > figcaption {
+    margin-left: 2px;
+}
+
+figure:nth-child(3) > figcaption > .minor-title {
+    margin-left: 1px;
+}
+
+figure:nth-child(3) .price {
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 108%;
+}
+
+figure:nth-child(3) .small {
+    font-size: 72%;
+}
+
+/* third image */
+
+figure:nth-child(4) > img {
+    padding: 4px 31px 5px 28px;
+}
+
+figure:nth-child(4) > figcaption {
+    margin-left: 3px;
+}
+
+figure:nth-child(4) > figcaption > .minor-title {
+    margin-left: -4px;
+}
+
+figure:nth-child(4) .price {
+    margin-left: 11px;
+    margin-top: 1px;
+    font-size: 104%;
+}
+
+figure:nth-child(4) .small {
+    margin-left: 1px;
+    font-size: 80%; /* повтор? */
 }
 
 .partners {
