@@ -419,10 +419,8 @@ fieldset > *,
 
 /* Catalog */
 
-
-
-.catalog-item > * {
-    flex: 1 0 auto;
+.catalog-item > nav {
+    flex-basis: 198px;
 }
 
 .aside-heading,
@@ -435,7 +433,7 @@ h3 {
 .aside-heading {
     display: inline-block;
     margin-top: 4px;
-    padding: 7px 9px 2px 3px;
+    padding: 7px 6px 2px 3px;
     box-shadow: 1px 2px 5px 0px #888e95;
 }
 
@@ -444,7 +442,7 @@ h3 {
     height: 28px;
     margin-top: 13px;
     margin-left: 3px;
-    line-height: 30px;
+    line-height: 28px;
     padding-left: 9px;
     box-sizing: border-box;
     font-size: 88%;
@@ -472,14 +470,13 @@ h3:nth-child(2)::before {
     height: 21px;
     margin-right: 5px;
     content: '';
-    background: #105b87 url('../img/icons.png') -86px 2px;
+    background: #105b87 url('../img/icons.png') -86px 1px;
     border-radius: 50%;
 }
 
 .brands-query h2 {
     margin-top: 2px;
 }
-
 
 .filter h3,
 .filter input[type=submit] {
@@ -501,11 +498,11 @@ h3:nth-child(2)::before {
 }
 
 .showroom {
-    margin: 0 2px;
+    margin: 1px 2px;
     flex-wrap: wrap;
     justify-content: center;
     flex-grow: 2;
-    flex-basis: 70%;
+    flex-basis: 550px;
     background: linear-gradient(#e4e7e8, #93a7b0);
     border-radius: 3px;
 }
@@ -532,8 +529,11 @@ h3:nth-child(2)::before {
     font-size: 80%;
 }
 
-.catalog-item > nav > a:hover {
+.catalog-item > nav > a:hover,
+.catalog-item > nav > a.active {
+    margin-top: 13px;
     text-decoration: underline;
+    font-size: 82%;
     font-weight: bold;
     font-style: italic;
     color: #105b87;
@@ -560,7 +560,7 @@ h3:nth-child(2)::before {
 /* first image */
 
 figure {
-    margin: 15px;
+    margin: 15px 17px;
     text-align: center;
 }
 
@@ -573,19 +573,19 @@ figcaption {
 }
 
 .showroom figure img {
-    padding: 5px 34px 4px 29px;
+    padding: 5px 33px 4px 29px;
     background-color: #fff;
     border-radius: 7px;
 }
 
 .minor-title {
-    margin-left: 6px;
+    margin: 1px auto auto 6px;
     font-size: 84%;
     color: #000;
 }
 
 .price {
-    margin-left: 8px;
+    margin: 1px auto auto 8px;
     color: #00446c;
     font-family: Arial, sans-serif;
     font-size: 103%;
@@ -627,6 +627,11 @@ figure:nth-child(3) .small {
 
 /* third image */
 
+figure:nth-child(4) {
+    margin-left: 13px;
+    padding-right: 4px;
+}
+
 figure:nth-child(4) > img {
     padding: 4px 31px 5px 28px;
 }
@@ -640,7 +645,7 @@ figure:nth-child(4) > figcaption > .minor-title {
 }
 
 figure:nth-child(4) .price {
-    margin-left: 11px;
+    margin-left: 10px;
     margin-top: 1px;
     font-size: 104%;
 }
@@ -648,6 +653,10 @@ figure:nth-child(4) .price {
 figure:nth-child(4) .small {
     margin-left: 1px;
     font-size: 80%; /* повтор? */
+}
+
+aside.filter {
+    flex-basis: 195px;
 }
 
 .partners {
