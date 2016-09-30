@@ -59,15 +59,23 @@ footer a {
 /* registration form */
 
 .user {
+    position: relative;
     width: 474px;
     margin-left: 10px;
     padding: 1px 20px 6px 3px;
-    background: url('../img/icons.png'), linear-gradient(#206988, #0c3256);
-    background-position: -103px 0;
+    background: linear-gradient(#206988, #0c3256);
     border-top: 1px solid #a6c3cf;
     border-bottom: 1px solid #4e647a;
     border-radius: 4px;
     box-shadow: 1px 2px 5px 0px #959595;
+}
+
+.user::before {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background: url('../img/icons.png') -100px 0 no-repeat;
+    content: '';
 }
 
 .login,
@@ -159,15 +167,15 @@ footer a {
     height: 14px;
     margin: 0 1px;
     padding-bottom: 1px;
-    background: url('../img/icons.png') -17px 0;
+    background: url('../img/icons.png') -23px 0;
 }
 
 .sitemap {
-    background-position: -32px 0;
+    background-position: -42px 0;
 }
 
 .email {
-    background-position: -46px 0;
+    background-position: -63px 0;
 }
 
 /* hero photo and main navigation */
