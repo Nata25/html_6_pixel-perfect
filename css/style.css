@@ -72,9 +72,10 @@ footer a {
 
 .user::before {
     position: absolute;
-    width: 10px;
-    height: 15px;
-    background: url('../img/icons.png') -100px 0 no-repeat;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: url('../img/icons.png') -140px 0 no-repeat;
     content: '';
 }
 
@@ -122,7 +123,7 @@ footer a {
     background-color: transparent;
     border: 0;
     color: #fff;
-    font-size: 71%;
+    font-size: 66%;
 }
 
 .user > a {
@@ -250,7 +251,7 @@ footer a {
     width: 26px;
     height: 20px;
     content: '';
-    background: url('../img/icons.png') -64px 0 no-repeat;
+    background: url('../img/icons.png') -83px 0 no-repeat;
 }
 
 .nums {
@@ -495,14 +496,14 @@ h3:nth-child(12)::before {
     margin-top: 7px;
 }
 
-.aside-heading:before {
+.aside-heading::before {
     float: left;
     margin-top: -5px;
     width: 21px;
     height: 21px;
     margin-right: 5px;
     content: '';
-    background: #105b87 url('../img/icons.png') -86px 1px;
+    background: #105b87 url('../img/icons.png') -105px 1px;
     border-radius: 50%;
 }
 
@@ -518,7 +519,8 @@ h3:nth-child(12)::before {
 .filter input[type=submit] {
     height: 27px;
     width: 82px;
-    margin-top: 15px;
+    margin-top: 17px;
+    margin-left: 29px;
     padding: 3px 13px;
     background: linear-gradient(#206988, #0c3256);
     border-width: 1px;
@@ -555,16 +557,18 @@ h3:nth-child(12)::before {
 }
 
 .filter h3:nth-child(6) {
-    margin-top: 2px;
+    margin-top: 12px;
 }
 
 .filter input[type=checkbox]::before {
     position: absolute;
-    width: 4px;
-    height: 4px;
-    /*background-position: 25px 5px;*/
-    content: url('../img/icons.png');
-    overflow: hidden;
+    width: 7px;
+    height: 7px;
+    top: 3px;
+    left: 3px;
+    border: 2px inset #2A83AC;
+    content: '';
+    border-radius: 2px;
 }
 
 .brands-query label {
@@ -590,7 +594,7 @@ h3:nth-child(12)::before {
 .filter label {
     color: #888e95;
     font-size: 13px; /* nav > a */
-    margin: 10px 0 0 20px; /* nav > a */
+    margin: 7px 0 0 29px; /* nav > a */
 }
 
 .catalog-item {
