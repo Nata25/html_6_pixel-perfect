@@ -42,7 +42,7 @@ footer a {
 h3,
 h4,
 .auto legend,
-.query input[type=submit],
+.query .submit-query,
 .aside-heading {
     color: #105b87;
 }
@@ -104,14 +104,14 @@ header {
 
 .login,
 .pass,
-.submit,
+.submit-user,
 .register,
 .restore-pass {
     position: relative;
     top: 1px;
 }
 
-.submit,
+.submit-user,
 .register,
 .restore-pass {
     left: 1px;
@@ -141,7 +141,7 @@ header {
     bottom: 1px;
 }
 
-.user .submit { /* вход */
+.user .submit-user { /* вход */
     padding: 0 0 0 2px;
     background-color: transparent;
     border: 0;
@@ -326,7 +326,7 @@ fieldset {
     font-weight: bold;
 }
 
-.query input[type=submit] {
+.query .submit-query {
     position: absolute;
     bottom: 7px;
     right: 5px;
@@ -521,11 +521,11 @@ nav h3:nth-child(12)::before {
 }
 
 .filter h3,
-.filter input[type=submit] {
+.filter .submit-filter {
     margin-left: 20px;
 }
 
-.filter input[type=submit] {
+.filter .submit-filter {
     height: 27px;
     width: 82px;
     margin: 17px auto auto 29px;
