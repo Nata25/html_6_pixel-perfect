@@ -11,15 +11,40 @@ main {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+.contacts,
+.query,
+.price,
+.filter input[type=submit],
 footer {
     font-family: Arial, sans-serif;
 }
 
 .contacts,
+.user,
+.quick-access-icons,
+.quick-access-icons > *,
 .query,
-.price,
-.filter input[type=submit] {
-    font-family: Arial, sans-serif;
+.main-nav > a,
+fieldset,
+fieldset > *,
+.tires label,
+footer a {
+    display: inline-block;
+}
+
+.search,
+.catalog-item,
+.showroom,
+.partners {
+    display: flex;
+}
+
+h3,
+h4,
+.auto legend,
+.query input[type=submit],
+.aside-heading {
+    color: #105b87;
 }
 
 .offset {
@@ -31,16 +56,6 @@ footer {
 
 header {
     height: 340px;
-}
-
-.contacts,
-.user,
-.quick-access-icons,
-.quick-access-icons > *,
-.query,
-.main-nav > a,
-footer a {
-    display: inline-block;
 }
 
 .contacts {
@@ -126,7 +141,7 @@ footer a {
     bottom: 1px;
 }
 
-.user .submit {
+.user .submit { /* вход */
     padding: 0 0 0 2px;
     background-color: transparent;
     border: 0;
@@ -248,10 +263,10 @@ footer a {
 .bucket {
     margin: 7px 15px;
     height: 19px;
-    line-height: 17px;
     float: right;
     color: #929b9f;
     font-size: .7em;
+    line-height: 17px;
 }
 
 .bucket::before {
@@ -266,16 +281,19 @@ footer a {
     color: #226695;
 }
 
-.bucket > .nums:first-child {
+.bucket > .nums:nth-child(2) {
     margin-right: 11px;
     margin-left: -2px;
 }
 
-.bucket > .nums:nth-child(2) {
+.bucket > .nums:nth-child(3) {
     margin-left: 7px;
     margin-right: -1px;
 }
-/* MAIN */
+
+/* MAIN AREA */
+
+/* query forms */
 
 .search {
     margin-top: 7px;
@@ -286,14 +304,23 @@ footer a {
 h3,
 .showroom figure img {
     border: 1px solid #b2b0b0;
-    border-radius: 15px; /* figure > img */
+}
+
+.query,
+.aside-heading,
+h3 {
+    border-radius: 15px;
+}
+
+fieldset {
+    border: 0;
 }
 
 .query {
     position: relative;
-    padding-left: 10px;
     height: 135px;
     margin: 0 8px;
+    padding-left: 10px;
     box-shadow: 3px 3px 5px 0px #888e95;
     font-size: .5em;
     font-weight: bold;
@@ -311,21 +338,6 @@ h3,
     cursor: pointer;
 }
 
-.search,
-.catalog-item,
-.showroom,
-.partners {
-    display: flex;
-}
-
-h3,
-h4,
-.auto legend,
-.query input[type=submit],
-.aside-heading {
-    color: #105b87;
-}
-
 .auto label {
     width: 65px;
 }
@@ -338,23 +350,13 @@ h4,
     width: 65px;
 }
 
-.search .query:first-child h4 {
+.query:first-child h4 {
     text-align: center;
 }
 
 h4 {
     margin: 3px 10px 5px;
     font-size: 13px;
-}
-
-fieldset {
-    display: inline-block;
-    border: 0;
-}
-
-fieldset > *,
-.tires label {
-    display: inline-block;
 }
 
 .auto {
@@ -372,7 +374,7 @@ fieldset > *,
 }
 
 .auto fieldset:nth-child(3) > legend {  /* Поиск по автомобилю -> шины */
-    right: 10px;
+    right: 36px;
 }
 
 .auto select {
@@ -449,33 +451,32 @@ fieldset > *,
 h3 {
     font-weight: inherit;
     text-transform: uppercase;
-    font-size: 79%; /* h3 */
 }
 
 .aside-heading {
     display: inline-block;
     margin-top: 4px;
     padding: 7px 6px 2px 3px;
+    font-size: 79%;
     box-shadow: 1px 2px 5px 0px #888e95;
 }
 
 h3 {
     width: 150px;
     height: 28px;
-    margin-top: 3px;
-    margin-left: 3px;
+    margin: 3px auto auto 3px;
     line-height: 28px;
     padding-left: 9px;
     box-sizing: border-box;
     font-size: 86%;
 }
 
-h3:nth-child(2) {
+nav h3:nth-child(2) {
     margin-top: 13px;
 }
 
-h3:nth-child(7),
-h3:nth-child(12) {
+nav h3:nth-child(7),
+nav h3:nth-child(12) {
     line-height: 26px;
 }
 
@@ -490,12 +491,12 @@ h3::before {
     content: '';
 }
 
-h3:nth-child(2)::before {
+nav h3:nth-child(2)::before {
     margin: 7px 7px 0 1px;
 }
 
-h3:nth-child(7)::before,
-h3:nth-child(12)::before {
+nav h3:nth-child(7)::before,
+nav h3:nth-child(12)::before {
     width: 11px;
     height: 11px;
 }
@@ -527,8 +528,7 @@ h3:nth-child(12)::before {
 .filter input[type=submit] {
     height: 27px;
     width: 82px;
-    margin-top: 17px;
-    margin-left: 29px;
+    margin: 17px auto auto 29px;
     padding: 3px 13px;
     background: linear-gradient(#206988, #0c3256);
     border-width: 1px;
@@ -651,9 +651,7 @@ figure {
 }
 
 figcaption {
-    margin-left: -3px;
-    margin-top: -1px;
-    margin-bottom: 1px;
+    margin: 0 auto 1px -3px;
     color: #206988;
     font-size: 95%;
 }
@@ -665,7 +663,7 @@ figcaption {
 }
 
 .minor-title {
-    margin: 1px auto auto 6px;
+    margin: 0 auto auto 6px;
     font-size: 84%;
     color: #000;
 }
@@ -737,12 +735,13 @@ figure:nth-child(4) .price {
 
 figure:nth-child(4) .small {
     margin-left: 1px;
-    font-size: 80%; /* повтор? */
 }
 
 aside.filter {
     flex-basis: 195px;
 }
+
+/* partners logos */
 
 .partners {
     margin: 35px auto 15px 5px;
@@ -750,49 +749,41 @@ aside.filter {
     align-items: center;
 }
 
-.partners > a {
+.partners > a:nth-child(2) {
     margin: 7px;
 }
 
-.partners > a:nth-child(2) {
-    margin-left: 5px;
-    margin-top: 0;
-}
-
 .partners > a:nth-child(3) {
-    margin-top: 7px;
-    margin-left: 6px;
+    margin: 0 7px 7px 5px;
 }
 
 .partners > a:nth-child(4) {
-    margin-top: 5px;
-    margin-left: 8px;
+    margin: 7px 7px 7px 6px;
 }
 
 .partners > a:nth-child(5) {
-    margin-top: 0;
-    margin-left: 5px;
+    margin: 5px 7px 7px 8px;
 }
 
 .partners > a:nth-child(6) {
-    margin-top: 6px;
-    margin-left: 6px;
+    margin: 1px 7px 7px 5px;
 }
 
 .partners > a:nth-child(7) {
-    margin-top: 3px;
-    margin-left: 6px;
+    margin: 6px 7px 7px 6px;
+}
+
+.partners > a:nth-child(8) {
+    margin: 3px 7px 7px 6px;
 }
 
 .partners > a:last-child {
-    margin-top: 1px;
-    margin-left: 8px;
+    margin: 1px 7px 7px 8px;
 }
 
 /* FOOTER */
 
 footer {
-    margin: 0 auto;
     height: 100px;
     background-color: #213a4d;
     text-align: center;
@@ -811,7 +802,7 @@ footer {
     font-size: 79%;
 }
 
-.footer-nav >a:first-child {
+.footer-nav > a:first-child {
     margin-left: 12px;
 }
 
@@ -830,8 +821,7 @@ footer {
 }
 
 .copy {
-    margin-top: 5px;
-    margin-left: 7px;
+    margin: 5px auto auto 7px;
     font-size: 68%;
     color: #814c3c;
 }
