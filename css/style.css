@@ -467,7 +467,7 @@ h3 {
     margin: 3px auto auto 3px;
     padding-left: 9px;
     font-size: 86%;
-    line-height: 28px;
+    line-height: 29px;
     box-sizing: border-box;
 }
 
@@ -477,7 +477,7 @@ nav h3:nth-child(2) {
 
 nav h3:nth-child(7),
 nav h3:nth-child(12) {
-    line-height: 26px;
+    line-height: 27px;
 }
 
 h3::before {
@@ -570,17 +570,22 @@ nav h3:nth-child(12)::before {
 }
 
 .filter h3 {
-    width: 138px;
+    width: 137px;
     margin-top: 15px;
-    line-height: 26px;
+    line-height: 27px;
+}
+
+.filter h3:nth-child(6) {
+    margin-top: 12px;
 }
 
 .filter h3:nth-child(2)::before {
     margin: 7px 9px 0 1px;
 }
 
-.filter h3:nth-child(6) {
-    margin-top: 12px;
+.filter h3:nth-child(6)::before {
+    width: 11px;
+    margin: 7px 10px 0 -1px;
 }
 
 .brands-query label {
