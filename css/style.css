@@ -584,6 +584,7 @@ nav h3:nth-child(12)::before {
 }
 
 .showroom {
+    height: 623px;
     margin: 1px 2px;
     flex-wrap: wrap;
     justify-content: center;
