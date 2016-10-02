@@ -17,7 +17,7 @@
             <form class="user" name="user" action="index.html" method="post">
                 <input type="text" class="login" name="login" placeholder="логин" required>
                 <input type="password" class="pass" name="pass" placeholder="пароль" required>
-                <input type="submit" class="submit" value="вход">
+                <input type="submit" class="submit-user" value="вход">
                 <a class="register" href="#">регистрация</a>
                 <a class="restore-pass" href="#">забыли пароль?</a>
             </form>
@@ -123,7 +123,7 @@
                         </select>
                     </fieldset>
 
-                    <input type="submit" value="поиск&hellip;">
+                    <input type="submit" class="submit-query" value="поиск&hellip;">
                 </form>
 
                 <!-- Поиск шин -->
@@ -161,7 +161,7 @@
 
                     </fieldset>
 
-                    <input type="submit" value="поиск&hellip;">
+                    <input type="submit" class="submit-query" value="поиск&hellip;">
 
                 </form>
 
@@ -210,7 +210,7 @@
                         </select>
                     </fieldset>
 
-                    <input type="submit" value="поиск&hellip;">
+                    <input type="submit" class="submit-query" value="поиск&hellip;">
 
                 </form>
             </section>
@@ -324,27 +324,27 @@
                         <h2 class="aside-heading">Бренды:</h2>
                         <h3>Шины</h3>
                         <label>
-                            <input type="checkbox" name="tires-brand" value="Бренд 1">Бренд 1
+                            <input type="checkbox" class="checkbox" name="tires-brand" value="Бренд 1">Бренд 1
                         </label>
                         <label>
-                            <input type="checkbox" name="tires-brand" value="Бренд 2">Бренд 2
+                            <input type="checkbox" class="checkbox" name="tires-brand" value="Бренд 2">Бренд 2
                         </label>
                         <label>
-                            <input type="checkbox" name="tires-brand" value="Бренд 3">Бренд 3
+                            <input type="checkbox" class="checkbox" name="tires-brand" value="Бренд 3">Бренд 3
                         </label>
 
                         <h3>Диски</h3>
                         <label>
-                            <input type="checkbox" name="disks-brand" value="Бренд 1">Бренд 1
+                            <input type="checkbox" class="checkbox" name="disks-brand" value="Бренд 1">Бренд 1
                         </label>
                         <label>
-                            <input type="checkbox" name="disks-brand" value="Бренд 2">Бренд 2
+                            <input type="checkbox" class="checkbox" name="disks-brand" value="Бренд 2">Бренд 2
                         </label>
                         <label>
-                            <input type="checkbox" name="disks-brand" value="Бренд 3">Бренд 3
+                            <input type="checkbox" class="checkbox" name="disks-brand" value="Бренд 3">Бренд 3
                         </label>
 
-                        <input type="submit" value="Выбрать">
+                        <input type="submit" class="submit-filter" value="Выбрать">
                     </form>
                 </aside>
 
