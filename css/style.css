@@ -601,7 +601,7 @@ nav h3:nth-child(12)::before {
 }
 
 .filter .checkbox:checked + label::before {
-    background: red;
+    background: url('../img/icons.png') -131px -7px no-repeat;
 }
 
 .filter .checkbox {
