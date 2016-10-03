@@ -520,6 +520,20 @@ nav h3:nth-child(12)::before {
     margin-top: 2px;
 }
 
+.brands-query label {
+    position: relative;
+}
+
+.catalog-item > nav > a,
+.filter > form > * {
+    display: block;
+}
+
+.catalog-item > nav > a,
+.filter label {
+    color: #888e95;
+}
+
 .filter {
     flex-basis: 195px;
 }
@@ -527,35 +541,6 @@ nav h3:nth-child(12)::before {
 .filter h3,
 .filter .submit-filter {
     margin-left: 20px;
-}
-
-.filter .submit-filter {
-    width: 82px;
-    height: 27px;
-    margin: 17px auto auto 29px;
-    padding: 3px 13px;
-    border-width: 1px;
-    border-radius: 30px;
-    background: linear-gradient(#206988, #0c3256);
-    color: #bbced4;
-    font-size: 75%;
-    text-transform: uppercase;
-    box-shadow: 2px 2px 2px 0 #cecece;
-}
-
-.filter .checkbox {
-    margin-right: 10px;
-}
-
-.filter .checkbox::before {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 7px;
-    height: 7px;
-    border: 2px inset #2a83ac;
-    border-radius: 2px;
-    content: '';
 }
 
 .filter .aside-heading {
@@ -575,46 +560,68 @@ nav h3:nth-child(12)::before {
     line-height: 27px;
 }
 
-.filter h3:nth-child(6) {
-    margin-top: 12px;
+.filter h3:nth-child(9) {
+    margin: 11px auto auto 21px;
+}
+
+.filter label:nth-child(11) {
+    margin-top: 11px;
+}
+
+.filter label:nth-child(13),
+.filter label:nth-child(15) {
+    margin-top: 10px;
 }
 
 .filter h3:nth-child(2)::before {
     margin: 7px 9px 0 1px;
 }
 
-.filter h3:nth-child(6)::before {
+.filter h3:nth-child(9)::before {
     width: 11px;
     margin: 7px 10px 0 -1px;
 }
 
-.brands-query label {
-    position: relative;
-}
-
-.showroom {
-    flex: 2 1 550px;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 623px;
-    margin: 1px 2px;
-    border-radius: 3px;
-    background: linear-gradient(#e4e7e8, #93a7b0);
-}
-
-.catalog-item > nav > a,
-.filter > form > * {
-    display: block;
-}
-
-.catalog-item > nav > a,
 .filter label {
-    color: #888e95;
+    display: inline-block;
+    width: 100px;
+    margin: 10px 0 3px 13px;
+    font-size: 79%;
 }
 
-.filter label {
-    margin: 7px 0 0 29px;
-    font-size: 13px;
+.filter label::before {
+    position: absolute;
+    top: 0;
+    left: -23px;
+    width: 6px;
+    height: 6px;
+    border: 2px inset #2a83ac;
+    border-radius: 2px;
+    content: '';
+}
+
+.filter .checkbox:checked + label::before {
+    background: red;
+}
+
+.filter .checkbox {
+    margin: 8px auto auto 30px;
+    float: left;
+    visibility: hidden;
+}
+
+.filter .submit-filter {
+    width: 82px;
+    height: 27px;
+    margin: 17px auto auto 29px;
+    padding: 3px 13px;
+    border-width: 1px;
+    border-radius: 30px;
+    background: linear-gradient(#206988, #0c3256);
+    color: #bbced4;
+    font-size: 75%;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 2px 0 #cecece;
 }
 
 .catalog-item {
@@ -653,6 +660,16 @@ nav h3:nth-child(12)::before {
 
 .catalog-item > nav > a:nth-child(8) {
     margin-top: 6px;
+}
+
+.showroom {
+    flex: 2 1 550px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 623px;
+    margin: 1px 2px;
+    border-radius: 3px;
+    background: linear-gradient(#e4e7e8, #93a7b0);
 }
 
 /* first image */
