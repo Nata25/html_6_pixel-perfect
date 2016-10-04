@@ -14,7 +14,7 @@ main {
 .contacts,
 .query,
 .price,
-.filter submit-filter,
+.filter .submit-filter,
 footer {
     font-family: Arial, sans-serif;
 }
@@ -306,10 +306,16 @@ h3,
     border: 1px solid #b2b0b0;
 }
 
-.query,
-.aside-heading,
-h3 {
+.query {
     border-radius: 15px;
+}
+
+.aside-heading {
+    border-radius: 15px / 16px;
+}
+
+h3 {
+    border-radius: 15px / 21px;
 }
 
 fieldset {
@@ -561,7 +567,7 @@ nav h3:nth-child(12)::before {
 }
 
 .filter h3:nth-child(9) {
-    margin: 11px auto auto 21px;
+    margin: 11px auto auto 20px;
 }
 
 .filter label:nth-child(11) {
@@ -578,8 +584,8 @@ nav h3:nth-child(12)::before {
 }
 
 .filter h3:nth-child(9)::before {
-    width: 11px;
-    margin: 7px 10px 0 -1px;
+    width: 10px;
+    margin: 7px 12px 0 -1px;
 }
 
 .filter label {
